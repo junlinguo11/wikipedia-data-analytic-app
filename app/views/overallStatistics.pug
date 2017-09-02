@@ -1,0 +1,26 @@
+script.
+	var overallBarChart =!{JSON.stringify(overallBarChart)}
+	var OverallPieChart =!{JSON.stringify(OverallPieChart)}
+	
+script(src='js/overall.js')
+script( type="text/javascript"
+		src="js/overallBarChart.js")
+
+
+div#container
+	h2#overall_title Overall Statistics
+	ul.summary
+		li The article with the most number of revisions: <strong>#{maxRevisionArticle}</strong>
+		li The article with the least number of revisions: <strong>#{minRevisionArticle}</strong>
+		li The article edited by largest group of unique registered users: <strong>#{maxRegisteredUserArticle}</strong>
+		li The article edited by smallest group of unique registered users: <strong>#{minRegisteredUserArticle}</strong>
+		li The article with the longest history (measured by age): <strong>#{maxAgeArticle}</strong>
+		li The article with the shortest history (measured by age): <strong>#{minAgeArticle}</strong>
+	div#tabs
+		ul
+			li #[a(href="#columnchart_material") Column Chart]
+			li #[a(href="#piechart_material") Pie Chart]
+		div#frame
+			#columnchart_material
+			#piechart_material
+div.loader

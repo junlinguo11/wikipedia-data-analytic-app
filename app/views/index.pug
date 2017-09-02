@@ -1,0 +1,37 @@
+doctype html
+
+html(lang="en")
+head
+	title Chart
+	link(rel='stylesheet'
+		 type='text/css'
+		 href='css/individual.css'
+		 media='screen')
+	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+	script( type="text/javascript"
+			src="js/jquery-3.2.1.min.js")
+	script( type="text/javascript"
+			src="js/jquery-ui.min.js")
+	script( type="text/javascript"
+		src="js/jquery.appear.js")
+	script( type="text/javascript"
+	src="https://www.gstatic.com/charts/loader.js")
+	script(src='js/individual.js')
+body
+	div#index
+			ul
+				li #[a(id="a" href="#individual-statistics") Individual Statistics]
+				li #[a(id="b" href="#overall-statistics") Overall Statistics]
+				#individual-statistics
+					div#box
+						div#selectbox
+							img#wiki(src='images/wiki.png')
+							select(id='title')
+								option(selected disabled) Select from articles
+								for name in titles
+									option(value = name) #{name}
+						span#hint
+						div#result
+					div.loader
+				#overall-statistics
+					div.loader

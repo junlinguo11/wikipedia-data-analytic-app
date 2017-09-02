@@ -1,0 +1,272 @@
+body {
+	padding: 0;
+  	margin: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+#container, #container_individual {
+	height: 100%;
+	width: 50%;
+    margin: 0 auto;
+    display:none;
+}
+
+#overall_title {
+	top: 50px;
+	width: 180px;
+	padding-top: 20px;
+	margin: 0 auto;
+	color:rgb(116, 149, 201);
+}
+
+.summary {
+	font-size:15px;
+	padding: 0;
+    margin-left: 20px;
+}
+
+#wiki {
+	display: block;
+	margin: 20px auto;
+}
+
+#selectbox {
+	display:none;
+}
+
+#title {
+	display: block;
+    margin: auto;
+    width: 45%;
+    font-size: 30px;
+    transition: margin-top 1s, font-size 1s, width 1s
+}
+
+#msg {
+	width: 370px;
+	font-size: small;
+	margin: 0 auto;
+	padding-top: 5px;
+	color: rgb(168, 39, 35);
+}
+
+#topFive li{
+	font-size:16px;
+	list-style-type: none;
+}
+
+#topFive li:not(:first-child) {
+	padding-top: 25px;
+}
+
+#topFive li a:link {
+	color: rgb(116, 149, 201);
+	text-decoration: none;
+	transition: color .5s;
+}
+
+#topFive li a:visited {
+	color: rgb(116, 149, 201);
+	text-decoration: none;
+}
+
+#topFive li a:hover {
+    text-decoration: underline;
+    color: rgb(61, 80, 109);
+}
+
+#sum_link {
+	padding-left: 10px;
+    padding-top: 10px;
+}
+
+#sum {
+	color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#sum:hover {
+	text-decoration: underline;
+}
+
+#user_and_chart {
+	height: 320px;
+	border: 1px solid black;
+	margin-bottom: 12px;
+}
+
+#user_chart {
+	float: right;
+    width: 420px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#columnchart_user {
+	padding: 10px;
+}
+
+#user_list {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+	margin: 10px;
+}
+
+#user_list h2 {
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+#topFive {
+	padding-left: 10px;
+}
+
+#tabs>ul, #tabs-individual>ul {
+	padding: 0;
+	margin-bottom: 11px;
+	list-style-type: none;
+	margin-top: 10px;
+}
+
+#tabs ul li, #tabs-individual ul li{
+	display: inline-block;
+}
+
+#tabs ul li a:link, a:visited {
+	background-color: rgb(116, 149, 201);
+    color: white;
+    font-size:18px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: backgroud-color .5s;l
+}
+
+#tabs ul li a:hover, a:active {
+	background-color: rgb(146, 184, 244);
+}
+
+#tabs ul li:nth-of-type(2){
+	padding-left:20px;
+}
+
+#tabs-individual ul li a:link, a:visited {
+	background-color: rgb(116, 149, 201);
+    color: white;
+    font-size:18px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: backgroud-color .5s;l
+}
+
+#tabs-individual ul li a:hover, a:active {
+	background-color: rgb(146, 184, 244);
+}
+
+#tabs-individual ul li:nth-of-type(2){
+	padding-left:20px;
+}
+
+a#individual_link:link {
+	background-color: rgb(116, 149, 201);
+    color: white;
+    font-size:18px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: backgroud-color .5s;
+	float:right;
+}
+
+a#individual_link:hover {
+	background-color: rgb(146, 184, 244);
+}
+
+a#overall_link:link {
+	background-color: rgb(116, 149, 201);
+    color: white;
+    font-size:18px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: backgroud-color .5s;
+	float:right;
+}
+
+a#overall_link:hover {
+	background-color: rgb(146, 184, 244);
+}
+
+#frame{
+	display:block;
+	width: 100%;
+	height: 350px;
+	margin: 0 auto;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#index>ul {
+	list-style-type: none;
+	margin-top:20px;
+}
+#a,#b {
+	padding: 0;
+	margin-bottom: 11px;
+	position: absolute;
+}
+
+#b {
+	top: 10%;
+}
+
+#a:link, #a:visited, #b:link, #b:visited {
+	background-color: #ffffff116149201;
+    color: #000000;
+    font-size:18px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid black;
+    width: 12%;
+    transition: width 1s;
+}
+
+#a:hover, #a:active, #b:hover, #b:active {
+	width: 12.5%;
+	background-color: white;
+	border: 2px solid red;
+}

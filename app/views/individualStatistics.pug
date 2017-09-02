@@ -1,0 +1,31 @@
+script.
+	var individualBarChart =!{JSON.stringify(individualBarChart)}
+	var individualPieChart =!{JSON.stringify(individualPieChart)}
+	var title = !{JSON.stringify(title)}
+
+script(src='js/individual-page.js')
+script( type="text/javascript"
+		src="js/individualChart.js")
+
+div#container_individual
+	h2#msg #{msg}
+	ul.summary
+		li Title: <strong>#{title}</strong>
+		li Total revision number is <strong>#{totalNumOfRevisions}</strong>
+	div#user_and_chart
+		div#user_chart
+		div#user_list
+			h2 Top Five Users
+			ul(id = "topFive")
+				each user in topFive
+					li(value = user.user)
+						|#{user.index}. #[a(href="#") #{user.user} (#{user.count})]
+			div#sum_link
+				a(id="sum" href="#") Summary Chart
+	div#tabs-individual
+		ul
+			li #[a(href="#columnchart_individual") Column Chart]
+			li #[a(href="#piechart_individual") Pie Chart]
+		div#frame
+			#columnchart_individual
+			#piechart_individual
